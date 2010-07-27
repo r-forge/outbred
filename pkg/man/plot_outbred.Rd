@@ -1,0 +1,47 @@
+\name{plot_outbred}
+\alias{plot_outbred}
+\title{
+Plot LOD curves for outbred data
+}
+\description{
+Plot the LOD curve including the markers for a genome scan with the single-QTL model. 
+}
+\usage{
+plot_outbred(model, old.data, dimension = '1D', chr = -1, gap = 25, ...)
+}
+\arguments{
+  \item{model}{An object of class \code{scanone}, as output by \code{\link{scanone}}.}
+  \item{old.data}{An object of class \code{cross}. See \code{\link{read.cross}} for details.}
+  \item{dimension}{A string giving the dimension of the QTL scan to be plotted, and the current version allows '1D' or '2D'.}
+  \item{chr}{Optional vector indicating the chromosomes to plot.}
+  \item{gap}{Gap separating chromosomes (in cM).}
+  \item{...}{Other arguments. See package \code{qtl} for details.}
+}
+\details{
+This function allow the user to plot the results produced by \code{scanone}. The LOD scores for single or multiple chromosomes are plotted with the markers indicated. 
+
+See also \code{\link{plot.scanone}} for plotting the scan results but with the probabilities on the marker positions.
+
+}
+\value{
+None
+}
+\author{
+Ronnie Nelson and Xia Shen
+}
+
+%% ~Make other sections like Warning with \section{Warning }{....} ~
+
+\seealso{
+\code{\link{impo.prob}}, \code{\link{qtl.outbred-package}}, \code{\link{plot.scanone}},
+}
+\examples{
+# ----- impo.prob example
+file <- paste(R.home(), '/library/qtl.outbred/example_data.csv', sep = '')
+data <- read.cross('csv', file = file, genotypes = c('AA', 'AB', 'BB'))
+outbred.data <- impo.prob(cross.data = data, stepsize = 5)
+
+# ----- QTL scan using Haley-Knott regression and plotting
+hk.model <- scanone(outbred.data, method = 'hk', pheno.col = 2) 
+plot_outbred(hk.model, data)
+}
