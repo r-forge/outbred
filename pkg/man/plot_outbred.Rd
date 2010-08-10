@@ -36,6 +36,8 @@ Ronnie Nelson and Xia Shen
 \code{\link{impo.prob}}, \code{\link{qtl.outbred-package}}, \code{\link{plot.scanone}},
 }
 \examples{
+\dontrun{
+
 # ----- impo.prob example
 file <- paste(R.home(), '/library/qtl.outbred/example_data.csv', sep = '')
 data <- read.cross('csv', file = file, genotypes = c('AA', 'AB', 'BB'))
@@ -44,4 +46,5 @@ outbred.data <- impo.prob(cross.data = data, stepsize = 5)
 # ----- QTL scan using Haley-Knott regression and plotting
 hk.model <- scanone(outbred.data, method = 'hk', pheno.col = 2) 
 plot_outbred(hk.model, data)
+}
 }

@@ -1,16 +1,24 @@
 impo.prob <-
-function(cross.data, stepsize = 1) {
+function(cross.data, path = NULL, stepsize = 1, Grid = FALSE) {
+
+#transforming grid probabilities	
+if (Grid){
+	cat('Transforming genotype probabilities from GridQTL...\n')
+	file.copy(paste(R.home(), '/library/qtl.outbred/lp2.pl', sep = ''), getwd())
+	system('perl lp2.pl')
+	cat('\n')
+}
 
 real.chrno <- nchr(cross.data)
 real.indno <- nind(cross.data)
 real.crosstype <- class(cross.data)[1]
-
+	
 data.list <- list()
 probno.per.chr <- marker.per.chr <- numeric(real.chrno)
 cat('Importing genotype probabilities from files ...\n')
 pb <- txtProgressBar(style = 3)
 for (i in 1:real.chrno) {
-	loading.name <- paste(R.home(), '/library/qtl.outbred/p_output_chrom_', i, '.txt', sep='')
+	loading.name <- paste(path, 'p_output_chrom_', i, '.txt', sep='')
 	data.list[[i]] <- read.table(loading.name)
 	probno.per.chr[i] <- length(data.list[[i]][,1])
 	marker.per.chr[i] <- probno.per.chr[i]/real.indno
