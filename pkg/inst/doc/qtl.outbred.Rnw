@@ -1,0 +1,16 @@
+% $Id: qtl.outbred.Rnw $
+
+%\VignetteIndexEntry{The qtl.outbred Package}
+%\VignetteKeywords{qtl.outbred}
+%\VignettePackage{qtl.outbred}
+
+\documentclass{article}
+
+\usepackage{pdfpages}
+
+\begin{document}
+
+\includepdf[pages={1-7}, fitpaper=true]{outbredmanual.pdf}
+
+\end{document}
+
