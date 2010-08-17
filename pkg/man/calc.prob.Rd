@@ -42,14 +42,9 @@ Ronnie Nelson and Xia Shen
 \code{\link{impo.prob}}, \code{\link{qtl.outbred-package}}
 }
 \examples{
-# ----- calc.prob example
-# ----- calculating the genotype probabilities from the files 'mi.txt',
-# 'mp.txt' and 'mg.txt' at 5 cM intervals and produce the files 
-# 'p_chrom_A.txt' (where A indicates the chromosome number for each chromosome).  
-
 \dontrun{
-
+# ----- calc.prob example (calculating the genotype probabilities from the files 'mi.txt', 'mp.txt' and 'mg.txt' at 5 cM intervals and produce the files 'p_chrom_A.txt',where A indicates the chromosome number for each chromosome).  
 setwd(paste(R.home(), '/library/qtl.outbred/', sep = ''))
-calc.prob(stepsize = 5)
+ calc.prob(stepsize = 5)
 }
 }

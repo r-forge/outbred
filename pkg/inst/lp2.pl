@@ -35,6 +35,8 @@ while (<IN3>){
 $chromnum = (scalar(@whichline))/2;
 print "Data found for ",$chromnum," chromosomes\n";
 
+
+
 #tester array finding
 #$max = $chromnum;
 #print  $max, " array length \n";
@@ -51,6 +53,11 @@ $counterC = 1;
 $setter=0;
 @arr =();
 
+#for ($countx = 0; $countx < (1+scalar(@whichline)); $countx++) {
+#	print $countx, "\t",$whichline[$countx] ,"\n";
+#}
+
+
 while (<IN3>){
 	chomp;
 	@arr = split;
@@ -62,6 +69,11 @@ while (<IN3>){
 			print OUT3 $arr[1], "\t",$arr[3], "\t",$arr[4]+$arr[5], "\t",$arr[6],"\n";
 		}
 	}
+	
+	#print $whichline[$counterB],"\t"; 
+
+	if ($counterB < scalar(@whichline))	{
+		
 	if ($counter == $whichline[$counterB]){
 		#print  "Out here\n";
 		#print $setter , "\n";
@@ -76,9 +88,15 @@ while (<IN3>){
 			print  "Converting chromosome ",$counterC,"\n";
 			open(OUT3,">p_output_chrom_".$counterC.".txt"); 
 			$counterC++;
+			
 		}
 		$counterB++;		
-	}	
+			}
+		
+	}
+
+
+	
 	$counter++;
 }
 
