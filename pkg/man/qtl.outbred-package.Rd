@@ -12,8 +12,8 @@ The package calculates and imports genotype probabilities from outbred intercros
 \tabular{ll}{
 Package: \tab qtl.outbred\cr
 Type: \tab Package\cr
-Version: \tab 2010.11.03\cr
-Date: \tab 2010-11-03\cr
+Version: \tab 2011.1\cr
+Date: \tab 2011-01-11\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
 Depends: \tab qtl\cr
@@ -33,8 +33,7 @@ Maintainer: Xia Shen <xia.shen@lcb.uu.se>
 # ----- impo.prob example
 file <- paste(R.home(), '/library/qtl.outbred/example_data.csv', sep = '')
 data <- read.cross('csv', file = file, genotypes = c('AA', 'AB', 'BB'))
-outbred.data <- impo.prob(cross.data = data, stepsize = 5, 
-                          path= paste(R.home(), '/library/qtl.outbred/', sep = ''))
+outbred.data <- impo.prob(cross.data = data, stepsize = 5, path= paste(R.home(), '/library/qtl.outbred/', sep = ''))
 
 # ----- QTL scan using Haley-Knott regression and plotting
 hk.model <- scanone(outbred.data, method = 'hk', pheno.col = 2) 

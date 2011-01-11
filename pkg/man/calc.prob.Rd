@@ -4,7 +4,7 @@
 Calculate genotype probabilities for outbred intercrosses using cnF2freq
 }
 \description{
-The function calculates genotype probabilities from outbred intercross data using published software 'cnF2freq'. The software is compiled for Windows and Unix operating systems. However the source code is included in the package installation folder or can be downloaded from: \url{http://user.it.uu.se/~carln/cnF2freq.html}
+The function calculates genotype probabilities from outbred intercross data using published software 'cnF2freq'. The software is compiled for Windows and Unix operating systems. However the source code is included in the package installation folder or can be downloaded from: http://user.it.uu.se/~carln/cnF2freq.html
 }
 \usage{
 calc.prob(os = 'unix', stepsize = 1, 
@@ -24,7 +24,8 @@ Three files are required for the calculating of genotype probabilities. All the 
  
 Three example files with the required format described above are provided in the package installation folder. 'mp.txt', 'mi.txt', and 'mg.txt' are the pedigree information file, marker information file, and the marker genotype file, respectively.
 
-Note that Perl is required for some of the functions in the package \code{qtl.outbred}.  and can be downloaded from: \url{http://www.perl.org/}
+Note that Perl is required for some of the functions in the package \code{qtl.outbred}.  and can be downloaded from:
+http://www.perl.org/
  
 }
 \value{
@@ -44,13 +45,8 @@ Ronnie Nelson and Xia Shen
 }
 \examples{
 \dontrun{
-# ----- calc.prob example
-# ----- calculating the genotype probabilities from the files 
-# ----- 'mi.txt', 'mp.txt' and 'mg.txt' at 5 cM intervals
-# ----- and produce the files 'p_chrom_A.txt',where A indicates chromosome.  
-
+# ----- calc.prob example (calculating the genotype probabilities from the files 'mi.txt', 'mp.txt' and 'mg.txt' at 5 cM intervals and produce the files 'p_chrom_A.txt',where A indicates the chromosome number for each chromosome).  
 setwd(paste(R.home(), '/library/qtl.outbred/', sep = ''))
-
-calc.prob(stepsize = 5)
+ calc.prob(stepsize = 5)
 }
 }
