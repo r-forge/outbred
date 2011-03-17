@@ -12,8 +12,8 @@ The package calculates and imports genotype probabilities from outbred intercros
 \tabular{ll}{
 Package: \tab qtl.outbred\cr
 Type: \tab Package\cr
-Version: \tab 2011.1\cr
-Date: \tab 2011-01-11\cr
+Version: \tab 2011.3.17\cr
+Date: \tab 2011-03-17\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
 Depends: \tab qtl\cr
@@ -26,7 +26,7 @@ Maintainer: Xia Shen <xia.shen@lcb.uu.se>
 }
 \keyword{QTL, outbred lines, genotype probabilities}
 \seealso{
-\code{\link{impo.prob}}, \code{\link{calc.prob}}, \code{\link{plot_outbred}}
+\code{\link{impo.prob}}, \code{\link{calc.prob}}
 }
 \examples{
 \dontrun{
@@ -37,6 +37,6 @@ outbred.data <- impo.prob(cross.data = data, stepsize = 5, path= paste(R.home(),
 
 # ----- QTL scan using Haley-Knott regression and plotting
 hk.model <- scanone(outbred.data, method = 'hk', pheno.col = 2) 
-plot_outbred(hk.model, data)
+plot(hk.model, data)
 }
 }

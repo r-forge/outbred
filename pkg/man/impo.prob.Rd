@@ -7,7 +7,7 @@ Import genotype probabilities into an existing cross object
 The function imports genotype probabilities into an existing qtl object. 
 }
 \usage{
-impo.prob(cross.data, path = NULL, stepsize = 1, Grid = FALSE)
+impo.prob(cross.data, path = NULL, stepsize = 1, Grid = FALSE) 
 }
 \arguments{
   \item{cross.data}{A cross object typically read in via \code{read.cross} in package \code{qtl}.}
@@ -55,7 +55,7 @@ setwd(paste(R.home(), '/library/qtl.outbred/', sep = ''))
 outbred.data <- impo.prob(cross.data = data, stepsize = 5, path= paste(R.home(), '/library/qtl.outbred/', sep = ''),Grid=TRUE)
 
 # ----- QTL scan using Haley-Knott regression and plotting
-hk.model <- scanone(outbred.data, method = 'hk', pheno.col = 2) 
-plot_outbred(hk.model, data)
+hk.model <- Scanone(outbred.data, method = 'hk', pheno.col = 2) 
+plot(hk.model)
 }
 }

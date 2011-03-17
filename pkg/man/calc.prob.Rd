@@ -1,7 +1,7 @@
 \name{calc.prob}
 \alias{calc.prob}
 \title{
-Calculate genotype probabilities for outbred intercrosses using cnF2freq
+Calculate genotype probabilities for outbred intercrosses using cnF2freq 
 }
 \description{
 The function calculates genotype probabilities from outbred intercross data using published software 'cnF2freq'. The software is compiled for Windows and Unix operating systems. However the source code is included in the package installation folder or can be downloaded from: http://user.it.uu.se/~carln/cnF2freq.html
