@@ -1,3 +1,24 @@
+.onAttach <- 
+function(...)
+{
+ cat("qtl.outbred: QTL mapping for outbred line crosses\n")
+ cat('Version 2011.03.17 installed\n')
+}
+
+
+
+
+.onLoad <- 
+function(...)
+{
+ if (require(qtl)) {
+ 	scanone.rqtl <<- scanone
+ 	scanone <<- scanone.raw
+ }
+}
+
+
+
 
 `calc.prob` <-
 function(os = 'unix', stepsize = 1, marker.info.file = 'mi.txt', 
@@ -119,7 +140,7 @@ return(fake.data)
 
 
 
-`Scanone` <- function(cross, chr, pheno.col=1, model=c("normal","binary","2part","np"),
+`scanone.raw` <- function(cross, chr, pheno.col=1, model=c("normal","binary","2part","np"),
          method=c("em","imp","hk","ehk","mr","mr-imp","mr-argmax"),
          addcovar=NULL, intcovar=NULL, weights=NULL,
          use=c("all.obs", "complete.obs"), upper=FALSE,
@@ -127,7 +148,7 @@ return(fake.data)
          n.perm, perm.Xsp=FALSE, perm.strata=NULL, verbose, batchsize=250,
          n.cluster=1, ind.noqtl) 
 {
-res <- scanone(cross, chr, pheno.col, model, method, addcovar, intcovar, weights, use, upper,
+res <- scanone.rqtl(cross, chr, pheno.col, model, method, addcovar, intcovar, weights, use, upper,
          ties.random, start, maxit, tol,
          n.perm, perm.Xsp, perm.strata, verbose, batchsize,
          n.cluster, ind.noqtl)
@@ -173,9 +194,4 @@ else {
 
 
 
-.onAttach <- 
-function(...)
-{
- cat("qtl.outbred: QTL mapping for outbred line crosses\n")
- cat('Version 2011.03.17 installed\n')
-}
+

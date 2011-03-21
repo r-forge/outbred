@@ -30,13 +30,13 @@ Maintainer: Xia Shen <xia.shen@lcb.uu.se>
 }
 \examples{
 \dontrun{
-# ----- impo.prob example
 file <- paste(R.home(), '/library/qtl.outbred/example_data.csv', sep = '')
 data <- read.cross('csv', file = file, genotypes = c('AA', 'AB', 'BB'))
-outbred.data <- impo.prob(cross.data = data, stepsize = 5, path= paste(R.home(), '/library/qtl.outbred/', sep = ''))
+path <- paste(R.home(), '/library/qtl.outbred/', sep = '')
+outbred.data <- impo.prob(cross.data = data, path = path, stepsize = 5)
 
 # ----- QTL scan using Haley-Knott regression and plotting
 hk.model <- scanone(outbred.data, method = 'hk', pheno.col = 2) 
-plot(hk.model, data)
+plot(hk.model)
 }
 }

@@ -1,3 +1,3 @@
-export("calc.prob","impo.prob","Scanone","plot.outbred")
+export("calc.prob","impo.prob","plot.outbred")
 
 S3method(plot,outbred)

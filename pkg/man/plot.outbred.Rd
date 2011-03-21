@@ -44,7 +44,7 @@ path <- paste(R.home(), '/library/qtl.outbred/', sep = '')
 outbred.data <- impo.prob(cross.data = data, path = path, stepsize = 5)
 
 # ----- QTL scan using Haley-Knott regression and plotting
-hk.model <- Scanone(outbred.data, method = 'hk', pheno.col = 2) 
+hk.model <- scanone(outbred.data, method = 'hk', pheno.col = 2) 
 plot(hk.model)
 }
 }
