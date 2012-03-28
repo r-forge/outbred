@@ -13,7 +13,7 @@ function(...)
 {
  if (require(qtl)) {
  	scanone.rqtl <<- scanone
- 	scanone <<- scanone.raw
+ 	scanone <- scanone.raw
  }
 }
 
