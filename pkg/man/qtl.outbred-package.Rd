@@ -12,8 +12,8 @@ The package calculates and imports genotype probabilities from outbred intercros
 \tabular{ll}{
 Package: \tab qtl.outbred\cr
 Type: \tab Package\cr
-Version: \tab 2011.3.17\cr
-Date: \tab 2011-03-17\cr
+Version: \tab 2013.05.03\cr
+Date: \tab 2013-05-03\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
 Depends: \tab qtl\cr
@@ -22,7 +22,7 @@ Depends: \tab qtl\cr
 \author{
 Ronnie Nelson and Xia Shen
 
-Maintainer: Xia Shen <xia.shen@lcb.uu.se>
+Maintainer: Xia Shen <xia.shen@slu.se>
 }
 \keyword{QTL, outbred lines, genotype probabilities}
 \seealso{
