@@ -2,9 +2,8 @@ citHeader("To cite qtl.outbred in publications use:")
 
 citEntry(entry="Article",
          title = "qtl.outbred: interfacing outbred line cross data with the R/qtl mapping software",
-         author = personList(as.person("Xia Shen"),
-                             as.person("Mats Pettersson"),
-                             as.person("Lars Ronnegard"),
+         author = personList(as.person("Ronald Nelson"),
+                             as.person("Xia Shen"),
                              as.person("Orjan Carlborg")),
          journal      = "BMC Research Notes",
          year         = "2011",
