@@ -1,12 +1,12 @@
 Package: qtl.outbred
 Type: Package
 Title: Interface for Genotype Probabilities from Outbred Intercross
-Version: 2012.3.28
-Date: 2012-03-28
+Version: 2013.05.03
+Date: 2013-05-03
 Author: Ronnie Nelson and Xia Shen
-Maintainer: Xia Shen <xia.shen@icm.uu.se>
+Maintainer: Xia Shen <xia.shen@slu.se>
 Description: The package calculates and imports genotype probabilities from outbred intercross designs into an R object. This allows fast scans for main effect QTL and two way interactions. Note to Linux users: On installation add the argument to the install.packages function: lib = paste(R.home(), '/library/', sep = '') 
 License: GPL
 LazyLoad: yes
 Depends: qtl
-Packaged: 2011-03-17 14:04:00 UTC; Xia Shen
+Packaged: 2013-05-03 14:04:00 UTC; Xia Shen
